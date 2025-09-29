@@ -6,7 +6,8 @@ import { createBrowserRouter , RouterProvider,Outlet} from "react-router-dom";
 import Error from "./Error";
 import ContactUs from "./ContactUs";
 import About from "./About";
-//import Grocery from "./Grocery";
+import RestaurentMenu from "./RestaurentMenu";
+import Grocery from "./Grocery";
 
 const Grocery = lazy(() => import("./Grocery"));
 
@@ -39,7 +40,11 @@ const approuter = createBrowserRouter([
      {
           path : "/gocery",
           element : <Suspense fallback={<h1>Loading...</h1>}><Grocery /></Suspense>,
-          },
+          },{
+               path : "/RestaurentMenu/:id",
+               element : <RestaurentMenu />
+               ,
+          }
     ],
       errorElement : <Error/>,
      },

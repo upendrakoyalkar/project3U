@@ -16,11 +16,11 @@ const [searchText , setsearchText] = useState("")
 const fetchdata= async() =>{
   const data  = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.37240&lng=78.43780&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
   const json = await data.json()
-  // setresList(json.)
+  console.log(json)
   setresLists(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   setdummydata(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
  
-  console.log(json)
+  //console.log(json)
 }
 
 const onlinestate =  useOnlineStatus()
@@ -57,7 +57,8 @@ return (
       <div className = "flex flex-wrap ">
       
       {dummydata.map( (i) => (
-        <RestaurentCards resData = {i} />))}  
+        <RestaurentCards  resData = {i} />))}  
+          
       </div>
       
 
