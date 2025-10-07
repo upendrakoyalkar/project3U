@@ -9,7 +9,7 @@ import About from "./About";
 import RestaurentMenu from "./RestaurentMenu";
 import Grocery from "./Grocery";
 
-const Grocery = lazy(() => import("./Grocery"));
+//const Grocery = lazy(() => import("./Grocery"));
 
 const App = () => {
     return(
@@ -38,7 +38,7 @@ const approuter = createBrowserRouter([
      element : <ContactUs />,
      },
      {
-          path : "/gocery",
+          path : "/Grocery",
           element : <Suspense fallback={<h1>Loading...</h1>}><Grocery /></Suspense>,
           },{
                path : "/RestaurentMenu/:id",

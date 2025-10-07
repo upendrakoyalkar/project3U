@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "good",
   "scripts": {
-     "start": "parcel src/index.html",
-  "build": "parcel build src/index.html"
-
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -26,6 +25,7 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.1",
+    "caniuse-lite": "^1.0.30001748",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.1.3",
